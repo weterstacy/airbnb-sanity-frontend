@@ -10,7 +10,19 @@ const Home = ({ properties }) => {
       {properties && (
         <div className="main">
           <div className="feed-container">
-            <h1>Places to stay near you</h1>
+            <h1 style={{ color: 'red', display: 'flex', alignItems: 'center', gap: '10px' }}>
+              Places to stay near you
+              <span style={{ 
+                fontSize: '12px', 
+                backgroundColor: '#ff385c', 
+                color: 'white', 
+                padding: '4px 8px', 
+                borderRadius: '4px',
+                fontWeight: 'normal'
+              }}>
+                Preview test
+              </span>
+            </h1>
             <div className="feed">
               {properties.map((property) => (
                 <Link href={`property/${property.slug.current}`}>
