@@ -4,17 +4,14 @@ import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api"
 const Map = ({ location }) => {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: process.env.googlePlacesAPI,
+    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
   })
 
-  console.log("location.lat", location.lat)
-  console.log("location.lat", location.lat)
   const containerStyle = {
     width: "100%",
     height: "400px",
   }
 
-  console.log(location.lat)
   const center = {
     lat: location.lat,
     lng: location.lng,
@@ -50,7 +47,6 @@ const Map = ({ location }) => {
           anchor: new google.maps.Point(5, 58),
         }}
       />
-      <></>
     </GoogleMap>
   ) : (
     <></>
