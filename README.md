@@ -37,7 +37,7 @@ and much more!
 1:46:45 - Adding in Review information\
 1:54:25 - Adding in Location information\
 2:06:01 - Adding Links with Next.js\
-2:07:15 - Building our AirBnB’s home page\
+2:07:15 - Building our AirBnB's home page\
 2:17:40 - Building our NavBar component\
 2:21:30 - Adding our AirBnB logo\
 2:23:35 - Adding a Cluster Map\
@@ -65,10 +65,32 @@ Instagram: https://www.instagram.com/aniakubow
 
 ## Getting Started
 
+### Prerequisites
+
+- Node.js 12.x or higher
+- npm or yarn
+- A Sanity.io account and project
+- Google Maps API key
+
+### Environment Setup
+
+1. Copy the example environment file:
+```bash
+cp .env.example .env.local
+```
+
+2. Fill in your environment variables in `.env.local`:
+   - `NEXT_PUBLIC_SANITY_PROJECT_ID`: Your Sanity project ID
+   - `NEXT_PUBLIC_SANITY_DATASET`: Your Sanity dataset (usually "production")
+   - `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY`: Your Google Maps API key
+
+### Installation
 
 First, install the packages:
 ```bash
-npm i
+npm install
+# or
+yarn install
 ```
 
 Second, run the development server:
@@ -81,3 +103,25 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+### Available Scripts
+
+- `npm run dev` - Runs the development server
+- `npm run build` - Builds the production application
+- `npm run start` - Starts the production server
+- `npm run lint` - Runs ESLint to check code quality
+- `npm run lint:fix` - Runs ESLint and automatically fixes issues
+- `npm run format` - Formats code using Prettier
+
+## Recent Improvements
+
+This fork includes several code quality and best practice improvements:
+
+- ✅ Fixed Google Maps API key environment variable naming
+- ✅ Removed development console.log statements
+- ✅ Added missing React key props
+- ✅ Added alt text to images for accessibility
+- ✅ Fixed typos in content
+- ✅ Added `.env.example` for easier setup
+- ✅ Added ESLint and Prettier configuration
+- ✅ Improved error handling and empty states
+- ✅ Added code quality scripts (lint, format)
